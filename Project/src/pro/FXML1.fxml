@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="pro/fxml1.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pro.FXML1Controller">
+   <children>
+      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="pro/fxml1.css" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="tab1" text="Manage Borrowers">
+               <content>
+                  <FlowPane prefHeight="400.0" prefWidth="700.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="470.0" prefWidth="700.0">
+                           <children>
+                              <HBox prefHeight="400.0" prefWidth="600.0" spacing="20.0">
+                                 <children>
+                                    <GridPane hgap="5.0" prefHeight="297.0" prefWidth="198.0">
+                                       <children>
+                                          <Label text="ID" />
+                                          <Label text="FName" GridPane.rowIndex="1" />
+                                          <Label text="LName" GridPane.rowIndex="2" />
+                                          <Label text="Moblie" GridPane.rowIndex="3" />
+                                          <Label text="Email" GridPane.rowIndex="4" />
+                                          <Label text="Gender" GridPane.rowIndex="5" />
+                                          <TextField fx:id="txID" prefHeight="25.0" prefWidth="189.0" GridPane.columnIndex="1" />
+                                          <TextField fx:id="txFName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField fx:id="txLName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField fx:id="txMoblie" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <TextField fx:id="txEmail" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <ChoiceBox fx:id="chooseBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="48.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="150.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <TableView fx:id="tableView1" prefHeight="365.0" prefWidth="468.0">
+                                       <columns>
+                                          <TableColumn fx:id="tcID" prefWidth="40.0" text="ID" />
+                                          <TableColumn fx:id="tcFNAME" prefWidth="75.0" text="FNAME" />
+                                          <TableColumn fx:id="tcLNAME" prefWidth="75.0" text="LNAME" />
+                                          <TableColumn fx:id="tcMOBLIE" prefWidth="75.0" text="MOBLIE" />
+                                          <TableColumn fx:id="tcEMAIL" prefWidth="138.0" text="EMAIL" />
+                                          <TableColumn fx:id="tcGENDER" prefWidth="60.0" text="GENDER" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="50.0" prefWidth="700.0" spacing="15.0" style="-fx-background-color: #b2fcff;">
+                                 <children>
+                                    <Button fx:id="show1" maxWidth="100.0" mnemonicParsing="false" onAction="#show1Handle" prefHeight="25.0" prefWidth="60.0" text="Show" />
+                                    <Button fx:id="add1" mnemonicParsing="false" onAction="#add1Handle" prefHeight="25.0" prefWidth="60.0" text="Add" />
+                                    <Button fx:id="update1" mnemonicParsing="false" onAction="#update1Handle" prefHeight="25.0" prefWidth="70.0" text="Update" />
+                                    <Button fx:id="delete1" mnemonicParsing="false" onAction="#delete1Handle" prefHeight="25.0" prefWidth="70.0" text="Delete" />
+                                    <TextField fx:id="search1" maxWidth="220.0" onAction="#search1Handle" prefHeight="30.0" prefWidth="180.0" promptText="Search For Borrower By Name" />
+                                    <Button fx:id="Reset1" mnemonicParsing="false" onAction="#Reset1Handle" prefHeight="25.0" prefWidth="60.0" text="Reset" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </FlowPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tab2" text="Manage Books">
+               <content>
+                  <FlowPane prefHeight="400.0" prefWidth="700.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="470.0" prefWidth="700.0">
+                           <children>
+                              <HBox prefHeight="400.0" prefWidth="600.0" spacing="20.0">
+                                 <children>
+                                    <GridPane hgap="5.0" prefHeight="400.0" prefWidth="263.0">
+                                       <children>
+                                          <Label text="ID" />
+                                          <Label text="Name" GridPane.rowIndex="1" />
+                                          <Label text="Author" GridPane.rowIndex="2" />
+                                          <Label text="Release" GridPane.rowIndex="3" />
+                                          <TextField fx:id="txID2" prefHeight="25.0" prefWidth="189.0" GridPane.columnIndex="1" />
+                                          <TextField fx:id="txName2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField fx:id="txAuthor" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField fx:id="txRelease" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Label text="Description" GridPane.rowIndex="4" />
+                                          <TextField fx:id="txDescription" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="48.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="150.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <TableView fx:id="tableView2" prefHeight="400.0" prefWidth="418.0">
+                                       <columns>
+                                          <TableColumn fx:id="tcID2" prefWidth="40.0" text="ID" />
+                                          <TableColumn fx:id="tcNAME2" prefWidth="85.0" text="NAME" />
+                                          <TableColumn fx:id="tcAUTHOR" prefWidth="85.0" text="AUTHOR" />
+                                          <TableColumn fx:id="tcRELEASE" prefWidth="100.0" text="RELEASE" />
+                                          <TableColumn fx:id="tcDESCRIPTION" prefWidth="85.0" text="DESCRIPTION" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="50.0" prefWidth="700.0" spacing="15.0" style="-fx-background-color: #b2fcff;">
+                                 <children>
+                                    <Button fx:id="show2" maxWidth="100.0" mnemonicParsing="false" onAction="#show2Handle" prefHeight="25.0" prefWidth="60.0" text="Show" />
+                                    <Button fx:id="add2" mnemonicParsing="false" onAction="#add2Handle" prefHeight="25.0" prefWidth="60.0" text="Add" />
+                                    <Button fx:id="update2" mnemonicParsing="false" onAction="#update2Handle" prefHeight="25.0" prefWidth="70.0" text="Update" />
+                                    <Button fx:id="delete2" mnemonicParsing="false" onAction="#delete2Handle" prefHeight="25.0" prefWidth="70.0" text="Delete" />
+                                    <TextField fx:id="search2" maxWidth="220.0" onAction="#search2Handle" prefHeight="30.0" prefWidth="180.0" promptText="Search For Book By Name" />
+                                    <Button fx:id="Reset2" mnemonicParsing="false" onAction="#Reset2Handle" prefHeight="25.0" prefWidth="60.0" text="Reset" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </FlowPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tab3" text="Manage Borrowed books">
+               <content>
+                  <FlowPane prefHeight="400.0" prefWidth="700.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="470.0" prefWidth="700.0">
+                           <children>
+                              <HBox prefHeight="400.0" prefWidth="600.0" spacing="20.0">
+                                 <children>
+                                    <GridPane hgap="5.0" prefHeight="400.0" prefWidth="252.0">
+                                       <children>
+                                          <Label text="Book_ID " GridPane.rowIndex="1" />
+                                          <Label text="Borrower_ID" GridPane.rowIndex="2" />
+                                          <Label text="Borrowing_Date" GridPane.rowIndex="3" />
+                                          <Label text="Return_Date" GridPane.rowIndex="4" />
+                                          <TextField fx:id="txIDBook" onAction="#SelectBook" prefHeight="25.0" prefWidth="127.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField fx:id="txBorrower_ID" onAction="#SelectBorrwer" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <DatePicker fx:id="Borrowing_Date" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <DatePicker fx:id="Return_Date" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <Label text="No:" />
+                                          <TextField fx:id="txNo" GridPane.columnIndex="1" />
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="61.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="129.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <TableView fx:id="tableView3" prefHeight="400.0" prefWidth="426.0">
+                                       <columns>
+                                          <TableColumn fx:id="tcNo" prefWidth="33.0" text="No:" />
+                                          <TableColumn fx:id="tcBorrower_ID" text="Borrower_ID" />
+                                          <TableColumn fx:id="tcID3" prefWidth="70.0" text="Book_ID " />
+                                          <TableColumn fx:id="tcReturn_Date" prefWidth="110.0" text="Return_Date" />
+                                          <TableColumn fx:id="tcBorrowing_Date" prefWidth="110.0" text="Borrowing_Date" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="50.0" prefWidth="700.0" spacing="15.0" style="-fx-background-color: #b2fcff;">
+                                 <children>
+                                    <Button fx:id="show3" maxWidth="100.0" mnemonicParsing="false" onAction="#show3Handle" prefHeight="25.0" prefWidth="60.0" text="Show" />
+                                    <Button fx:id="add3" mnemonicParsing="false" onAction="#add3Handle" prefHeight="25.0" prefWidth="60.0" text="Add" />
+                                    <Button fx:id="update3" mnemonicParsing="false" onAction="#update3Handle" prefHeight="25.0" prefWidth="70.0" text="Update" />
+                                    <Button fx:id="delete3" mnemonicParsing="false" onAction="#delete3Handle" prefHeight="25.0" prefWidth="70.0" text="Delete" />
+                                    <TextField fx:id="search3" maxWidth="220.0" onAction="#search3Handle" prefHeight="30.0" prefWidth="180.0" promptText="Search For Borrowed books By Name" />
+                                    <Button fx:id="Reset3" mnemonicParsing="false" onAction="#Reset3Handle" prefHeight="25.0" prefWidth="60.0" text="Reset" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </FlowPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</FlowPane>

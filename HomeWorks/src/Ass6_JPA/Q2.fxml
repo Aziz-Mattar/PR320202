@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="502.0" prefWidth="802.0" stylesheets="Ass6_JPA/Q2.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ass6_JPA.Q2Controller">
+   <children>
+      <VBox alignment="CENTER" prefHeight="515.0" prefWidth="806.0" spacing="15.0" style="-fx-background-color: #98d6ea;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="530.0" prefWidth="667.0" spacing="10.0">
+               <children>
+                  <VBox prefHeight="403.0" prefWidth="398.0" spacing="15.0">
+                     <children>
+                        <GridPane hgap="10.0" maxHeight="-Infinity" prefHeight="164.0" prefWidth="368.0" vgap="20.0">
+                           <children>
+                              <Label text="ID" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Name" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Major" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Grade" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txFieldID" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="txFieldName" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="txFieldMajor" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="txFieldGrade" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Student Info">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="90.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="186.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <GridPane hgap="10.0" maxHeight="-Infinity" prefHeight="106.0" prefWidth="368.0" vgap="25.0">
+                           <children>
+                              <Label text="ID" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Course ID" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Semester" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txFieldIDr" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="txFieldCourser" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="txFieldSemester" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Info">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="90.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="186.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <TextArea fx:id="textArea" prefHeight="107.0" prefWidth="368.0" promptText="Write Queury">
+                           <font>
+                              <Font name="Monospaced Regular" size="12.0" />
+                           </font>
+                        </TextArea>
+                      
+                     </children>
+                  </VBox>
+                  <TableView fx:id="tableView" prefHeight="403.0" prefWidth="418.0">
+                     <columns>
+                        <TableColumn fx:id="tcID" prefWidth="99.0" text="ID" />
+                        <TableColumn fx:id="tcName" prefWidth="105.0" text="Name" />
+                        <TableColumn fx:id="tcMajor" prefWidth="116.0" text="Major" />
+                        <TableColumn fx:id="tcGrade" prefWidth="85.0" text="Grade" />
+                     </columns>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="57.0" prefWidth="825.0" spacing="10.0">
+               <children>
+                  <Button fx:id="buttonShow" mnemonicParsing="false" onAction="#buttonShowHandle" prefHeight="25.0" prefWidth="153.0" text="Show">
+                     <font>
+                        <Font name="Monospaced Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonAdd" mnemonicParsing="false" onAction="#buttonAddHandle" prefHeight="25.0" prefWidth="153.0" text="Add S">
+                     <font>
+                        <Font name="Monospaced Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonAdd1" mnemonicParsing="false" onAction="#buttonAddCHandle" prefHeight="25.0" prefWidth="153.0" text="Add C">
+                     <font>
+                        <Font name="Monospaced Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonUpdate" mnemonicParsing="false" onAction="#buttonUpdateHandle" prefHeight="25.0" prefWidth="153.0" text="Update">
+                     <font>
+                        <Font name="Monospaced Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonDelete" mnemonicParsing="false" onAction="#buttonDeleteHandle" prefHeight="25.0" prefWidth="153.0" text="Delete">
+                     <font>
+                        <Font name="Monospaced Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonReset" mnemonicParsing="false" onAction="#buttonResetHandle" prefHeight="25.0" prefWidth="153.0" text="Reset">
+                     <font>
+                        <Font name="Monospaced Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonperformQuery" mnemonicParsing="false" onAction="#buttonperformQueryHandle" prefHeight="25.0" prefWidth="153.0" text="perform Q">
+                     <font>
+                        <Font name="Monospaced Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</FlowPane>

@@ -1,0 +1,11 @@
+/*
+ * Empty Stylesheet file.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+.root{
+  -fx-font-family: 'Roboto Slab', serif;
+}
+.button{
+    -fx-font-size:14;
+    -fx-font-weight: bold
+}

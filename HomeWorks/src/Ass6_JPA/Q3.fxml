@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" stylesheets="Ass6_JPA/css.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ass6_JPA.Q3Controller">
+   <children>
+      <VBox prefHeight="650.0" prefWidth="600.0">
+         <children>
+            <HBox prefHeight="595.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="523.0" prefWidth="440.0" spacing="15.0">
+                     <children>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="104.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="180.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Student Info">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Label text="ID" GridPane.rowIndex="1" />
+                              <Label text="Name" GridPane.rowIndex="2" />
+                              <Label text="Major" GridPane.rowIndex="3" />
+                              <Label text="Grade" GridPane.rowIndex="4" />
+                              <TextField fx:id="txFieldID" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="txFieldName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="txFieldMajor" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="txFieldGrade" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                        <HBox alignment="CENTER" minHeight="40.0" prefHeight="50.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #29c7ac;">
+                           <children>
+                              <Button fx:id="AddButton0" mnemonicParsing="false" onAction="#AddButton0Handle" prefHeight="35.0" prefWidth="70.0" text="ADD" />
+                              <Button fx:id="ShowButton0" mnemonicParsing="false" onAction="#ShowButton0Handle" prefHeight="35.0" prefWidth="70.0" text="SHOW" />
+                           </children>
+                        </HBox>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="106.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="178.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Info">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Label text="C_ID" GridPane.rowIndex="1" />
+                              <Label text="Semester" GridPane.rowIndex="3" />
+                              <TextField fx:id="txFieldCID" onAction="#SelectC" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="txFieldSemester" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="S_ID" GridPane.rowIndex="2" />
+                              <TextField fx:id="txFieldSID" onAction="#SelectS" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <HBox alignment="CENTER" minHeight="40.0" prefHeight="50.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #29c7ac;">
+                           <children>
+                              <Button fx:id="AddButton1" mnemonicParsing="false" onAction="#AddButton1Handle" prefHeight="35.0" prefWidth="70.0" text="ADD" />
+                           </children>
+                        </HBox>
+                        <TextArea fx:id="textArea" prefHeight="150.0" prefWidth="200.0" promptText="Write Queury" />
+                        <HBox alignment="CENTER" minHeight="40.0" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #29c7ac;">
+                           <children>
+                              <Button fx:id="preformButton" mnemonicParsing="false" onAction="#preformButtonHandle" prefHeight="35.0" prefWidth="100.0" text="Preform" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="415.0" prefWidth="442.0" spacing="10.0">
+                     <children>
+                        <TableView fx:id="tableView1" prefHeight="582.0" prefWidth="266.0">
+                          <columns>
+                            <TableColumn fx:id="tcID" prefWidth="30.0" text="ID" />
+                            <TableColumn fx:id="tcName" prefWidth="75.0" text="Name" />
+                              <TableColumn fx:id="tcMajor" prefWidth="75.0" text="Major" />
+                              <TableColumn fx:id="tcGrade" prefWidth="75.0" text="Grade" />
+                          </columns>
+                        </TableView>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" minHeight="40.0" prefHeight="50.0" prefWidth="750.0" spacing="20.0" style="-fx-background-color: #29c7ac;">
+               <children>
+                  <Button fx:id="UpdateButton" mnemonicParsing="false" onAction="#UpdateButtonHandle" prefHeight="35.0" prefWidth="100.0" text="UPDATE" />
+                  <Button fx:id="DeleteButton" mnemonicParsing="false" onAction="#DeleteButtonHandle" prefHeight="35.0" prefWidth="100.0" text="DELETE" />
+                  <Button fx:id="ResetButton" mnemonicParsing="false" onAction="#ResetButtonHandle" prefHeight="35.0" prefWidth="100.0" text="RESET" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</FlowPane>

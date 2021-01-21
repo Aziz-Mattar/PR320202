@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 13, 2020, 12:45:19 AM
+    Author     : azizb
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+.root{
+  -fx-font-family: 'Roboto Slab', serif;
+}
+.button{
+    -fx-background-color: #fc3;
+    -fx-text-fill:#000;
+    -fx-font-size:14;
+    -fx-font-weight: bold
+}
+.button:selected{
+    -fx-background-color: red;
+}
+.button:hover{
+    -fx-background-color: #ff3;
+}
